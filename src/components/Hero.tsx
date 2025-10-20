@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
         <motion.div
           key={i}
           className={`absolute w-1 h-1 rounded-full ${
-            darkMode ? "bg-white/20" : "bg-gray-600/20" // <--- FIX: Changed from bg-gray-400/20 for better contrast
+            darkMode ? "bg-white/20" : "bg-gray-600/20"
           }`}
           initial={{
             x: Math.random() * window.innerWidth,
@@ -178,9 +178,9 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
                 href={href}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.2 + index * 0.1 }}
+                transition={{ delay: 0.6 + index * 0.1 }}
                 whileHover={{ scale: 1.2, rotate: 5 }}
-                className={`p-3 backdrop-blur-sm rounded-full transition-all duration-300 ${
+                className={`p-3 backdrop-blur-sm rounded-full transition-all duration-150 ${
                   darkMode
                     ? "bg-gray-800/50 text-gray-300 hover:text-white hover:bg-gray-700/50"
                     : "bg-white/50 text-gray-600 hover:text-gray-900 hover:bg-white/70"
@@ -192,10 +192,36 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
               </motion.a>
             ))}
           </div>
+
+          {/* ADDED: New Scroll Down Indicator for Mobile ONLY */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: [0, 10, 0] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "loop",
+              delay: 2.0,
+            }}
+            // Visible on mobile, hidden on tablet/laptop
+            className="mt-8 sm:hidden"
+          >
+            <a
+              href="#about"
+              className={` ${
+                darkMode ? "text-gray-300" : "text-gray-600"
+              } hover:scale-110 transition-transform duration-300`}
+              aria-label="Scroll down to About section"
+            >
+              {/* Uses fixed size for mobile clarity */}
+              <ChevronDown size={50} />
+            </a>
+          </motion.div>
+          {/* END ADDED BLOCK */}
         </motion.div>
       </div>
 
-      {/* Scroll Down Indicator */}
+      {/* Scroll Down Indicator (Original - visible on tablet/laptop) */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
@@ -205,7 +231,8 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           repeatType: "loop",
           delay: 2.0,
         }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        // ADDED: hidden sm:block to hide it on mobile
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden sm:block"
       >
         <a
           href="#about"
@@ -216,7 +243,8 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           } hover:scale-110 transition-transform duration-300`}
           aria-label="Scroll down to About section"
         >
-          <ChevronDown size={50} />
+          {/* Swapped size={50} for responsive Tailwind classes on the Icon itself */}
+          <ChevronDown className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />
         </a>
       </motion.div>
     </section>
