@@ -11,10 +11,17 @@
 
 html {
   scroll-behavior: smooth;
+  /* *** MODIFIED: Add overflow-x: hidden to the root element (html) 
+    *** This is the most reliable fix for iOS white space issues.
+  */
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Inter", sans-serif;
+  /* MODIFIED: Ensure body takes up exactly 100% of the viewport width */
+  width: 100vw;
+  /* KEEP: The original overflow-x: hidden; rule */
   overflow-x: hidden;
 }
 
@@ -51,18 +58,7 @@ body.dark {
 body.light {
   background-color: #ffffff;
   color: #111827;
-}
-
-/* Selection styles */
-::selection {
-  background: rgba(59, 130, 246, 0.3);
-}
-
-/* Focus styles */
-button:focus,
-input:focus,
-textarea:focus {
-  outline: none;
-  ring: 2px;
-  ring-color: rgba(59, 130, 246, 0.5);
+  /* Smooth transitions */
+  transition: color 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 }
