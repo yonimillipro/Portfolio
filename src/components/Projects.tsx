@@ -266,6 +266,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
 };
 
 export default Projects;
+
 // import React, { useState } from "react";
 // import { motion } from "framer-motion";
 // import { Github, ExternalLink } from "lucide-react";
