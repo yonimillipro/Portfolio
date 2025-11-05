@@ -20,82 +20,61 @@ const allProjects = [
       "A booking platform inspired by Booking.com, featuring hotel search, room selection, date filtering, and a mock payment process.",
     // **FIXED IMAGE URL** (Replaced Google Drive link with a direct URL)
     image:
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: [
-      "React",
-      "Redux Toolkit",
-      "Node.js/Express",
-      "MongoDB",
-      "Tailwind CSS",
-    ],
+      "https://github.com/user-attachments/assets/1c65436e-3231-44e2-aa7b-2511da3a867b",
+    technologies: ["React", "Css3", "PHP", "MySQL"],
     github: "https://github.com/yonimillipro/reservation",
     live: "https://your-hotel-reservation.vercel.app",
     category: "Fullstack",
   },
-  // --- Fullstack Project 2: Netflix Clone (Now Project ID 2 after removal) ---
-  {
-    id: 2,
-    title: "Netflix Clone",
-    description:
-      "A video streaming service interface clone featuring dynamic content browsing, user authentication, and movie trailers using a movie database API.",
-    image: "https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg",
-    technologies: [
-      "React",
-      "Firebase",
-      "TypeScript",
-      "TMDB API",
-      "Tailwind CSS",
-    ],
-    github: "https://github.com/yonimillipro/Netflix-clone",
-    live: "https://netflix-clone-eight-opal-67.vercel.app/",
-    category: "Fullstack",
-  },
   // --- New Fullstack Project 3: Healthcare Web App ---
   {
-    id: 3,
+    id: 2,
     title: "Healthcare Service",
     description:
       "A secure and responsive platform for managing patient appointments, viewing medical history, and telemedicine consultations.",
     image:
-      "https://images.unsplash.com/photo-1588776813476-8f3b2e5a4f78?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: [
-      "Next.js",
-      "PostgreSQL",
-      "TypeScript",
-      "Prisma",
-      "Tailwind CSS",
-    ],
-    github: "https://github.com/yourusername/healthcare-app",
-    live: "https://your-healthcare-app.vercel.app",
-    category: "Fullstack",
+      "https://github.com/user-attachments/assets/0bcdbae5-24f0-4cc7-88ae-92e43e9f379c",
+    technologies: ["React.js", "Tailwind CSS", "Javascript-Es6"],
+    github:
+      "https://github.com/yonimillipro/Dr.-Saba-Medium-Clinic-Health-Services",
+    live: "https://dr-saba-medium-clinic-health-servic.vercel.app/",
+    category: "Frontend",
   },
   // --- New Frontend Project 4: Consultancy Web App ---
   {
-    id: 4,
+    id: 3,
     title: "Infinite Consultancy ",
     description:
       "A professional website for a study abroad and wellness consultancy, featuring service showcases, testimonial sections, and a booking form.",
     image:
-      "https://images.unsplash.com/photo-1518386345914-4fbcc09c13b6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: [
-      "React",
-      "Framer Motion",
-      "SCSS",
-      "Formik",
-      "Responsive Design",
-    ],
-    github: "https://github.com/yourusername/consultancy-web-app",
-    live: "https://your-consultancy-web.vercel.app",
+      "https://github.com/yonimillipro/Task-tracker-/blob/main/Infinity%20Consultancy%20on%20DarkMode.png?raw=true",
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Superbase"],
+    github: "https://github.com/yonimillipro/edu-merged-site",
+    live: "https://edu-merged-site.vercel.app/",
+    category: "Fullstack",
+  },
+  {
+    id: 4,
+    title: "Netflix Clone",
+    description:
+      "A video streaming service interface clone featuring dynamic content browsing, user authentication, and movie trailers using a movie database API.",
+    image:
+      "https://github.com/yonimillipro/Netflix-clone/blob/main/netflix%20-clone.png?raw=true",
+    technologies: ["React", "Firebase", "Javascript-Es6", "TMDB API"],
+    github: "https://github.com/yonimillipro/Netflix-clone",
+    live: "https://netflix-clone-eight-opal-67.vercel.app/",
     category: "Frontend",
   },
+
   // --- Frontend Project 5: Task Management UI (Now ID 5) ---
+
   {
     id: 5,
     title: "Task Management UI",
     description:
       "A beautiful task management interface with drag-and-drop functionality, smooth animations, and responsive design.",
     image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg",
-    technologies: ["React", "Framer Motion", "React DnD", "Tailwind CSS"],
+    technologies: ["React", "CSS3", "Javascript-E6", "JSON Server"],
     github: "https://github.com/yonimillipro/Task-Tracker",
     live: "https://task-tracker-kappa-cyan.vercel.app/",
     category: "Frontend",
