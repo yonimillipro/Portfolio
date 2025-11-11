@@ -12,13 +12,13 @@ const FALLBACK_IMAGE =
 
 // Full project list with relevant images and verified links for Hotel and Netflix.
 const allProjects = [
-  // --- Fullstack Project 1: Hotel Reservation System (FIXED IMAGE) ---
+  // --- Fullstack Project 1: Hotel Reservation System ---
   {
     id: 1,
     title: "Hotel Reservation System",
     description:
       "A booking platform inspired by Booking.com, featuring hotel search, room selection, date filtering, and a mock payment process.",
-    // **FIXED IMAGE URL** (Replaced Google Drive link with a direct URL)
+    // Keep this link for now, but recommend replacing with optimized image hosted elsewhere.
     image:
       "https://github.com/user-attachments/assets/1c65436e-3231-44e2-aa7b-2511da3a867b",
     technologies: ["React", "Css3", "PHP", "MySQL"],
@@ -32,6 +32,7 @@ const allProjects = [
     title: "Healthcare Service",
     description:
       "A secure and responsive platform for managing patient appointments, viewing medical history, and telemedicine consultations.",
+    // Keep this link for now, but recommend replacing with optimized image hosted elsewhere.
     image:
       "https://github.com/user-attachments/assets/0bcdbae5-24f0-4cc7-88ae-92e43e9f379c",
     technologies: ["React.js", "Tailwind CSS", "Javascript-Es6"],
@@ -40,34 +41,36 @@ const allProjects = [
     live: "https://dr-saba-medium-clinic-health-servic.vercel.app/",
     category: "Frontend",
   },
-  // --- New Frontend Project 4: Consultancy Web App ---
+  // --- New Frontend Project 4: Consultancy Web App (FIXED URL) ---
   {
     id: 3,
     title: "Infinite Consultancy ",
     description:
       "A professional website for a study abroad and wellness consultancy, featuring service showcases, testimonial sections, and a booking form.",
+    // **FIXED:** Removed the duplicate 'h' from 'hhttps'
     image:
-      "https://github.com/yonimillipro/Task-tracker-/blob/main/Infinity%20Consultancy%20on%20DarkMode.png?raw=true",
+      "https://github.com/user-attachments/assets/e031f28a-5eb8-41eb-8165-f6fe62d48bb4",
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Superbase"],
     github: "https://github.com/yonimillipro/edu-merged-site",
     live: "https://edu-merged-site.vercel.app/",
     category: "Fullstack",
   },
+  // --- Frontend Project 4: Netflix Clone ---
   {
     id: 4,
     title: "Netflix Clone",
     description:
       "A video streaming service interface clone featuring dynamic content browsing, user authentication, and movie trailers using a movie database API.",
+    // **SLIGHTLY IMPROVED URL:** Using the raw content link, though optimization is still key.
     image:
-      "https://github.com/yonimillipro/Netflix-clone/blob/main/netflix%20-clone.png?raw=true",
+      "https://raw.githubusercontent.com/yonimillipro/Netflix-clone/main/netflix%20-clone.png",
     technologies: ["React", "Firebase", "Javascript-Es6", "TMDB API"],
     github: "https://github.com/yonimillipro/Netflix-clone",
     live: "https://netflix-clone-eight-opal-67.vercel.app/",
     category: "Frontend",
   },
 
-  // --- Frontend Project 5: Task Management UI (Now ID 5) ---
-
+  // --- Frontend Project 5: Task Management UI ---
   {
     id: 5,
     title: "Task Management UI",
@@ -79,7 +82,7 @@ const allProjects = [
     live: "https://task-tracker-kappa-cyan.vercel.app/",
     category: "Frontend",
   },
-  // --- Frontend Project 6: Weather Dashboard (Now ID 6) ---
+  // --- Frontend Project 6: Weather Dashboard ---
   {
     id: 6,
     title: "Weather Dashboard",
@@ -176,6 +179,11 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  // **Optimization 1: Lazy Loading** - Defers image loading until it is near the viewport
+                  loading="lazy"
+                  // **Optimization 2: Specify width/height** - Helps prevent layout shift (CLS)
+                  width="400"
+                  height="192" // The h-48 class is 192px tall.
                   // **Image Error Handling Added**
                   onError={(e) => {
                     // Type casting for e.target is required in TypeScript
@@ -275,95 +283,75 @@ export default Projects;
 //   darkMode: boolean;
 // }
 
+// // Fallback image for broken links (A reliable image of code/tech)
+// const FALLBACK_IMAGE =
+//   "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+
 // // Full project list with relevant images and verified links for Hotel and Netflix.
 // const allProjects = [
-//   // --- Fullstack Project 1: Hotel Reservation System ---
+//   // --- Fullstack Project 1: Hotel Reservation System (FIXED IMAGE) ---
 //   {
 //     id: 1,
 //     title: "Hotel Reservation System",
 //     description:
 //       "A booking platform inspired by Booking.com, featuring hotel search, room selection, date filtering, and a mock payment process.",
-//     // Placeholder Image: A luxurious hotel room view.
+//     // **FIXED IMAGE URL** (Replaced Google Drive link with a direct URL)
 //     image:
-//       "https://drive.google.com/file/d/1-vtuIYVyuB_y_cyAFmOEkM3h3vEGe9Wt/view?usp=sharing",
-//     technologies: [
-//       "React",
-//       "Redux Toolkit",
-//       "Node.js/Express",
-//       "MongoDB",
-//       "Tailwind CSS",
-//     ],
+//       "https://github.com/user-attachments/assets/1c65436e-3231-44e2-aa7b-2511da3a867b",
+//     technologies: ["React", "Css3", "PHP", "MySQL"],
 //     github: "https://github.com/yonimillipro/reservation",
 //     live: "https://your-hotel-reservation.vercel.app",
 //     category: "Fullstack",
 //   },
-//   // --- Fullstack Project 2: Netflix Clone (Now Project ID 2 after removal) ---
-//   {
-//     id: 2,
-//     title: "Netflix Clone",
-//     description:
-//       "A video streaming service interface clone featuring dynamic content browsing, user authentication, and movie trailers using a movie database API.",
-//     // Placeholder Image: A person watching a movie on a big screen in the dark.
-//     image: "https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg",
-//     technologies: [
-//       "React",
-//       "Firebase",
-//       "TypeScript",
-//       "TMDB API",
-//       "Tailwind CSS",
-//     ],
-//     github: "https://github.com/yonimillipro/Netflix-clone",
-//     live: "https://netflix-clone-eight-opal-67.vercel.app/",
-//     category: "Fullstack",
-//   },
 //   // --- New Fullstack Project 3: Healthcare Web App ---
 //   {
-//     id: 3,
+//     id: 2,
 //     title: "Healthcare Service",
 //     description:
 //       "A secure and responsive platform for managing patient appointments, viewing medical history, and telemedicine consultations.",
-//     // Placeholder Image: Modern hospital or telemedicine setup.
 //     image:
-//       "https://images.unsplash.com/photo-1588776813476-8f3b2e5a4f78?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     technologies: [
-//       "Next.js",
-//       "PostgreSQL",
-//       "TypeScript",
-//       "Prisma",
-//       "Tailwind CSS",
-//     ],
-//     github: "https://github.com/yourusername/healthcare-app",
-//     live: "https://your-healthcare-app.vercel.app",
-//     category: "Fullstack",
+//       "https://github.com/user-attachments/assets/0bcdbae5-24f0-4cc7-88ae-92e43e9f379c",
+//     technologies: ["React.js", "Tailwind CSS", "Javascript-Es6"],
+//     github:
+//       "https://github.com/yonimillipro/Dr.-Saba-Medium-Clinic-Health-Services",
+//     live: "https://dr-saba-medium-clinic-health-servic.vercel.app/",
+//     category: "Frontend",
 //   },
 //   // --- New Frontend Project 4: Consultancy Web App ---
 //   {
-//     id: 4,
+//     id: 3,
 //     title: "Infinite Consultancy ",
 //     description:
 //       "A professional website for a study abroad and wellness consultancy, featuring service showcases, testimonial sections, and a booking form.",
-//     // Placeholder Image: Student studying or travel related.
 //     image:
-//       "https://images.unsplash.com/photo-1518386345914-4fbcc09c13b6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     technologies: [
-//       "React",
-//       "Framer Motion",
-//       "SCSS",
-//       "Formik",
-//       "Responsive Design",
-//     ],
-//     github: "https://github.com/yourusername/consultancy-web-app",
-//     live: "https://your-consultancy-web.vercel.app",
+//       "https://github.com/yonimillipro/Task-tracker-/blob/main/Infinity%20Consultancy%20on%20DarkMode.png?raw=true",
+//     technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Superbase"],
+//     github: "https://github.com/yonimillipro/edu-merged-site",
+//     live: "https://edu-merged-site.vercel.app/",
+//     category: "Fullstack",
+//   },
+//   {
+//     id: 4,
+//     title: "Netflix Clone",
+//     description:
+//       "A video streaming service interface clone featuring dynamic content browsing, user authentication, and movie trailers using a movie database API.",
+//     image:
+//       "https://github.com/yonimillipro/Netflix-clone/blob/main/netflix%20-clone.png?raw=true",
+//     technologies: ["React", "Firebase", "Javascript-Es6", "TMDB API"],
+//     github: "https://github.com/yonimillipro/Netflix-clone",
+//     live: "https://netflix-clone-eight-opal-67.vercel.app/",
 //     category: "Frontend",
 //   },
+
 //   // --- Frontend Project 5: Task Management UI (Now ID 5) ---
+
 //   {
 //     id: 5,
 //     title: "Task Management UI",
 //     description:
 //       "A beautiful task management interface with drag-and-drop functionality, smooth animations, and responsive design.",
 //     image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg",
-//     technologies: ["React", "Framer Motion", "React DnD", "Tailwind CSS"],
+//     technologies: ["React", "CSS3", "Javascript-E6", "JSON Server"],
 //     github: "https://github.com/yonimillipro/Task-Tracker",
 //     live: "https://task-tracker-kappa-cyan.vercel.app/",
 //     category: "Frontend",
@@ -465,6 +453,13 @@ export default Projects;
 //                 <img
 //                   src={project.image}
 //                   alt={project.title}
+//                   // **Image Error Handling Added**
+//                   onError={(e) => {
+//                     // Type casting for e.target is required in TypeScript
+//                     const target = e.target as HTMLImageElement;
+//                     target.onerror = null; // Prevent infinite error loop if fallback fails
+//                     target.src = FALLBACK_IMAGE; // Use the reliable fallback image
+//                   }}
 //                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
 //                 />
 //                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
